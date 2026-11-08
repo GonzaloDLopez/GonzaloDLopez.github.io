@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Términos de uso y normas de la comunidad de Frikiando">
+  <meta name="color-scheme" content="light">
+  <title>Términos de uso | Frikiando</title>
+  <style>
+    :root {
+      --ink: #182033;
+      --muted: #5b6477;
+      --paper: #fffdf8;
+      --surface: #ffffff;
+      --line: #ded8ca;
+      --navy: #24304d;
+      --gold: #d7a72f;
+      --green: #2d7254;
+      --blue: #345fa8;
+      --focus: #b87400;
+      --notice: #f7eed3;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 10;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--navy);
+      font-weight: 700;
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 24px 72px;
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      bottom: -150px;
+      border: 34px solid var(--gold);
+      border-radius: 50%;
+      opacity: .9;
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+      font-weight: 750;
+      letter-spacing: .01em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      padding: 6px;
+      border: 2px solid rgba(255, 255, 255, .65);
+      border-radius: 12px;
+      transform: rotate(8deg);
+    }
+
+    .brand-mark i {
+      display: block;
+      border-radius: 3px;
+    }
+
+    .brand-mark i:nth-child(1) { background: #e04f4f; }
+    .brand-mark i:nth-child(2) { background: var(--gold); }
+    .brand-mark i:nth-child(3) { background: #4b8bd2; }
+    .brand-mark i:nth-child(4) { background: #62a36e; }
+
+    h1, h2, h3 {
+      color: var(--navy);
+      line-height: 1.18;
+    }
+
+    header h1 {
+      max-width: 760px;
+      margin: 0;
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.15rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    header p {
+      max-width: 60ch;
+      margin: 12px 0 0;
+      color: #e1e6f0;
+      font-size: 1.08rem;
+    }
+
+    main {
+      max-width: 880px;
+      margin: -34px auto 56px;
+      padding: 0 20px;
+    }
+
+    .language-links,
+    .terms {
+      position: relative;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: 0 16px 42px rgba(36, 48, 77, .08);
+    }
+
+    .language-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 12px;
+      border-radius: 14px;
+    }
+
+    .language-links a {
+      min-height: 44px;
+      padding: 9px 16px;
+      border-radius: 9px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .language-links a:hover { background: #eef3fb; }
+
+    .terms {
+      margin-bottom: 24px;
+      padding: clamp(24px, 5vw, 48px);
+      border-radius: 20px;
+    }
+
+    .terms h2 {
+      margin-top: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+    }
+
+    .terms h3 {
+      margin: 34px 0 10px;
+      font-size: 1.18rem;
+    }
+
+    .terms p,
+    .terms li { max-width: 76ch; }
+
+    .terms ul { padding-left: 1.35rem; }
+
+    .notice {
+      margin: 24px 0 30px;
+      padding: 18px 20px;
+      border-left: 5px solid var(--gold);
+      border-radius: 4px 12px 12px 4px;
+      background: var(--notice);
+      color: #3e3520;
+    }
+
+    a { color: var(--blue); }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    footer {
+      padding: 30px 20px 46px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a { display: inline-block; padding: 8px 4px; }
+
+    @media (max-width: 600px) {
+      header { padding: 34px 20px 64px; }
+      header::after { opacity: .55; }
+      main { padding: 0 14px; }
+      .terms { border-radius: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Frikiando</span>
+      </div>
+      <h1>Términos de uso y normas de la comunidad</h1>
+      <p>Las reglas esenciales para organizar, compartir y jugar en Frikiando.</p>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <nav class="language-links" aria-label="Seleccionar idioma">
+      <a href="#es">Español</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
+
+    <article class="terms" id="es">
+      <h2>Términos de uso</h2>
+      <p><strong>Última actualización:</strong> 8 de noviembre de 2026.</p>
+
+      <p>
+        Estos términos regulan el uso de Frikiando (la “aplicación”), desarrollada
+        y operada por Gonzalo D. Lopez / ZORAPP. Al crear una cuenta o utilizar la
+        aplicación, aceptás estos términos y las normas de la comunidad. Si no
+        estás de acuerdo, no utilices el servicio.
+      </p>
+
+      <div class="notice">
+        Frikiando ayuda a organizar juntadas de juegos de mesa y aventuras de rol.
+        Los grupos y encuentros son creados por sus usuarios: Frikiando no organiza,
+        dirige ni supervisa reuniones presenciales.
+      </div>
+
+      <h3>1. Descripción del servicio</h3>
+      <p>Frikiando permite, entre otras funciones:</p>
+      <ul>
+        <li>crear una cuenta y administrar un perfil;</li>
+        <li>registrar una biblioteca personal de juegos de mesa;</li>
+        <li>crear grupos privados o ingresar mediante invitación;</li>
+        <li>usar chats, propuestas, votaciones y notificaciones;</li>
+        <li>organizar juntadas, asistencia, cronogramas y responsabilidades;</li>
+        <li>crear personajes y continuar aventuras de rol.</li>
+      </ul>
+      <p>
+        La versión actual es gratuita, no incluye anuncios ni compras dentro de la
+        aplicación. Si esto cambiara, se informará de manera clara antes de cobrar.
+      </p>
+
+      <h3>2. Cuenta y acceso</h3>
+      <p>
+        Debés proporcionar información válida cuando sea necesaria para crear y
+        proteger tu cuenta. Sos responsable de mantener seguras tus credenciales y
+        de la actividad realizada desde tu cuenta. No compartas tu contraseña ni
+        intentes acceder a cuentas, grupos o información sin autorización.
+      </p>
+      <p>
+        Frikiando está dirigida a personas mayores de 18 años. No crees una cuenta
+        si no cumplís la edad mínima aplicable en tu país.
+      </p>
+
+      <h3>3. Contenido aportado por usuarios</h3>
+      <p>
+        Conservás los derechos que correspondan sobre tus textos, imágenes y demás
+        contenido. Al cargarlo, autorizás a Frikiando a almacenarlo, procesarlo y
+        mostrarlo únicamente para prestar las funciones que solicitás, como perfiles,
+        bibliotecas, grupos, chats, juntadas y aventuras.
+      </p>
+      <p>
+        Solo podés compartir contenido propio o que tengas derecho a utilizar. No
+        publiques datos personales de terceros sin su consentimiento.
+      </p>
+
+      <h3>4. Conductas y contenido prohibidos</h3>
+      <p>No se permite utilizar Frikiando para:</p>
+      <ul>
+        <li>acosar, amenazar, intimidar o promover violencia;</li>
+        <li>promover odio o discriminación;</li>
+        <li>publicar explotación sexual, contenido sexual no consentido o contenido que involucre sexualmente a menores;</li>
+        <li>cometer fraude, suplantar identidades u organizar actividades ilegales;</li>
+        <li>enviar spam, engaños, software malicioso o contenido repetitivo no solicitado;</li>
+        <li>infringir derechos de autor, marcas, privacidad u otros derechos;</li>
+        <li>difundir domicilios, teléfonos u otros datos privados de otra persona sin permiso;</li>
+        <li>interferir con la seguridad, disponibilidad o funcionamiento del servicio.</li>
+      </ul>
+
+      <h3>5. Reportes, bloqueo y moderación</h3>
+      <p>
+        Los usuarios pueden reportar mensajes o personas y bloquear o silenciar
+        contactos desde la aplicación. Podemos revisar reportes, ocultar o eliminar
+        contenido, limitar funciones, suspender o cerrar cuentas y conservar la
+        evidencia necesaria para proteger a la comunidad o cumplir obligaciones
+        legales. Los reportes falsos o abusivos también pueden generar medidas.
+      </p>
+
+      <h3>6. Juntadas y encuentros presenciales</h3>
+      <p>
+        Frikiando facilita la coordinación, pero cada participante decide si asiste y
+        debe evaluar responsablemente el lugar, las personas y las condiciones del
+        encuentro. Los organizadores son responsables de la información que publican,
+        de sus invitaciones y de las actividades realizadas. Evitá publicar direcciones
+        privadas fuera de los grupos apropiados.
+      </p>
+
+      <h3>7. Juegos, personajes y material de rol</h3>
+      <p>
+        Las bibliotecas, fichas, cronogramas y registros de aventuras son herramientas
+        organizativas. No reemplazan los manuales oficiales ni las reglas acordadas por
+        cada mesa. Las marcas y obras de terceros pertenecen a sus respectivos titulares.
+        Los avisos aplicables están disponibles en los
+        <a href="https://zorapp-frikiando-api.onrender.com/avisos-legales">avisos legales y licencias</a>.
+      </p>
+
+      <h3>8. Privacidad y eliminación de la cuenta</h3>
+      <p>
+        El tratamiento de datos se explica en la
+        <a href="https://zorapp-frikiando-api.onrender.com/privacidad">Política de privacidad</a>.
+        Podés eliminar tu cuenta desde la aplicación o seguir el procedimiento de la
+        <a href="https://zorapp-frikiando-api.onrender.com/eliminar-cuenta">página de eliminación de cuenta</a>.
+      </p>
+
+      <h3>9. Servicios de terceros</h3>
+      <p>
+        Frikiando utiliza servicios de Firebase para autenticación, notificaciones y
+        diagnóstico de fallos; Neon para datos; Cloudinary para imágenes; y Render para
+        ejecutar el servicio. El uso de esos proveedores también está sujeto a sus
+        condiciones y políticas aplicables.
+      </p>
+
+      <h3>10. Disponibilidad y cambios</h3>
+      <p>
+        Podemos corregir errores, modificar funciones, realizar mantenimiento o
+        discontinuar partes del servicio. No garantizamos disponibilidad ininterrumpida
+        ni compatibilidad con todos los dispositivos o futuras versiones de Android.
+        Cuando un cambio material requiera una nueva aceptación, lo informaremos en la
+        aplicación.
+      </p>
+
+      <h3>11. Propiedad intelectual</h3>
+      <p>
+        Frikiando, su identidad visual, software y materiales propios pertenecen a su
+        desarrollador o se utilizan con las autorizaciones correspondientes. Estos
+        términos no transfieren derechos de propiedad intelectual sobre la aplicación.
+      </p>
+
+      <h3>12. Garantías, responsabilidad y derechos del consumidor</h3>
+      <p>
+        En la medida permitida por la ley, el servicio se ofrece tal como está y según
+        disponibilidad. Frikiando no es responsable por información incorrecta cargada
+        por usuarios, conductas de participantes, conflictos entre integrantes ni daños
+        derivados de encuentros organizados por terceros. Nada de lo aquí indicado
+        limita derechos obligatorios que legalmente no puedan excluirse.
+      </p>
+
+      <h3>13. Cambios en estos términos</h3>
+      <p>
+        Podemos actualizar estos términos cuando cambien las funciones, servicios o
+        requisitos aplicables. La fecha vigente se indicará al comienzo del documento.
+      </p>
+
+      <h3>14. Ley aplicable y contacto</h3>
+      <p>
+        Estos términos se interpretan conforme a las leyes aplicables en la República
+        Argentina, sin afectar normas obligatorias ni derechos irrenunciables de
+        consumidores de otras jurisdicciones.
+      </p>
+      <p>
+        Para consultas, reclamos o reportes que no puedas realizar desde la aplicación,
+        escribí a <a href="mailto:zorapp.dev@gmail.com">zorapp.dev@gmail.com</a>.
+      </p>
+    </article>
+
+    <article class="terms" id="en" lang="en">
+      <h2>Terms of Use</h2>
+      <p><strong>Last updated:</strong> November 8, 2026.</p>
+
+      <p>
+        These terms govern the use of Frikiando (the “application”), developed and
+        operated by Gonzalo D. Lopez / ZORAPP. By creating an account or using the
+        application, you agree to these terms and the community rules. If you do not
+        agree, do not use the service.
+      </p>
+
+      <div class="notice">
+        Frikiando helps users organize board-game gatherings and tabletop role-playing
+        adventures. Groups and meetups are created by users; Frikiando does not organize,
+        direct, or supervise in-person meetings.
+      </div>
+
+      <h3>1. Service description</h3>
+      <p>Frikiando provides tools to:</p>
+      <ul>
+        <li>create an account and manage a profile;</li>
+        <li>register a personal board-game library;</li>
+        <li>create private groups or join them by invitation;</li>
+        <li>use chats, proposals, polls, and notifications;</li>
+        <li>organize meetups, attendance, schedules, and responsibilities;</li>
+        <li>create characters and continue tabletop role-playing adventures.</li>
+      </ul>
+      <p>
+        The current version is free and contains no advertising or in-app purchases.
+        If this changes, users will be clearly informed before any charge applies.
+      </p>
+
+      <h3>2. Account and access</h3>
+      <p>
+        You must provide valid information when needed to create and protect your
+        account. You are responsible for keeping your credentials secure and for
+        activity performed through your account. Do not share your password or attempt
+        to access accounts, groups, or information without authorization.
+      </p>
+      <p>
+        Frikiando is intended for people aged 18 and over. Do not create an account if
+        you do not meet the minimum age applicable in your country.
+      </p>
+
+      <h3>3. User-provided content</h3>
+      <p>
+        You retain the rights that apply to your text, images, and other content. By
+        uploading content, you allow Frikiando to store, process, and display it only
+        to provide requested features such as profiles, libraries, groups, chats,
+        meetups, and adventures.
+      </p>
+      <p>
+        You may only share content you own or have the right to use. Do not publish
+        another person's personal information without permission.
+      </p>
+
+      <h3>4. Prohibited conduct and content</h3>
+      <p>You may not use Frikiando to:</p>
+      <ul>
+        <li>harass, threaten, intimidate, or promote violence;</li>
+        <li>promote hate or discrimination;</li>
+        <li>publish sexual exploitation, non-consensual sexual content, or sexual content involving minors;</li>
+        <li>commit fraud, impersonate others, or organize unlawful activity;</li>
+        <li>send spam, scams, malware, or repetitive unsolicited content;</li>
+        <li>infringe copyrights, trademarks, privacy, or other rights;</li>
+        <li>disclose another person's address, phone number, or private information without permission;</li>
+        <li>interfere with the security, availability, or operation of the service.</li>
+      </ul>
+
+      <h3>5. Reports, blocking, and moderation</h3>
+      <p>
+        Users can report messages or people and block or mute contacts in the
+        application. We may review reports, hide or remove content, restrict features,
+        suspend or close accounts, and retain evidence needed to protect the community
+        or meet legal obligations. False or abusive reports may also result in action.
+      </p>
+
+      <h3>6. Meetups and in-person events</h3>
+      <p>
+        Frikiando helps coordinate meetups, but each participant decides whether to
+        attend and must responsibly assess the place, people, and conditions. Organizers
+        are responsible for the information they publish, their invitations, and the
+        activities conducted. Avoid posting private addresses outside appropriate groups.
+      </p>
+
+      <h3>7. Games, characters, and role-playing material</h3>
+      <p>
+        Libraries, character sheets, schedules, and adventure records are organizational
+        tools. They do not replace official rulebooks or the rules agreed upon by each
+        group. Third-party trademarks and works belong to their respective owners. See
+        the <a href="https://zorapp-frikiando-api.onrender.com/avisos-legales">legal notices and licenses</a>.
+      </p>
+
+      <h3>8. Privacy and account deletion</h3>
+      <p>
+        Data handling is explained in the
+        <a href="https://zorapp-frikiando-api.onrender.com/privacidad">Privacy Policy</a>.
+        You can delete your account from the application or follow the process on the
+        <a href="https://zorapp-frikiando-api.onrender.com/eliminar-cuenta">account deletion page</a>.
+      </p>
+
+      <h3>9. Third-party services</h3>
+      <p>
+        Frikiando uses Firebase for authentication, notifications, and crash diagnostics;
+        Neon for application data; Cloudinary for images; and Render to run the service.
+        Use of these providers is also subject to their applicable terms and policies.
+      </p>
+
+      <h3>10. Availability and changes</h3>
+      <p>
+        We may fix errors, change features, perform maintenance, or discontinue parts of
+        the service. We do not guarantee uninterrupted availability or compatibility with
+        every device or future Android version. If a material change requires renewed
+        acceptance, we will notify users in the application.
+      </p>
+
+      <h3>11. Intellectual property</h3>
+      <p>
+        Frikiando, its visual identity, software, and original materials belong to its
+        developer or are used with the appropriate authorization. These terms do not
+        transfer intellectual-property rights in the application.
+      </p>
+
+      <h3>12. Warranties, liability, and consumer rights</h3>
+      <p>
+        To the extent permitted by law, the service is provided as is and as available.
+        Frikiando is not responsible for inaccurate user-provided information, participant
+        conduct, disputes between members, or harm arising from events organized by third
+        parties. Nothing in these terms limits mandatory rights that cannot legally be
+        excluded.
+      </p>
+
+      <h3>13. Changes to these terms</h3>
+      <p>
+        We may update these terms when features, services, or applicable requirements
+        change. The effective date will appear at the beginning of this document.
+      </p>
+
+      <h3>14. Governing law and contact</h3>
+      <p>
+        These terms are interpreted under the applicable laws of the Republic of
+        Argentina, without affecting mandatory rules or non-waivable consumer rights in
+        other jurisdictions.
+      </p>
+      <p>
+        For questions, complaints, or reports you cannot submit in the application,
+        email <a href="mailto:zorapp.dev@gmail.com">zorapp.dev@gmail.com</a>.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Frikiando · Gonzalo D. Lopez / ZORAPP ·
+    <a href="https://zorapp-frikiando-api.onrender.com/privacidad">Privacidad / Privacy</a> ·
+    <a href="mailto:zorapp.dev@gmail.com">zorapp.dev@gmail.com</a>
+  </footer>
+</body>
+</html>
